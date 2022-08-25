@@ -1,11 +1,9 @@
 package Jun.Server.controller;
 
 import java.util.List;
-import java.util.Map;
 
 import Jun.Server.jwtService.JwtTokenProvider;
 import Jun.Server.mapper.UserProfileMapper;
-import Jun.Server.model.User;
 import Jun.Server.model.UserProfile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -69,7 +67,6 @@ public class UserProfileController {
         jsonObject.addProperty("test", "5");
         return jsonObject;
     }
-
  */
 
     @PostMapping("user/login")
