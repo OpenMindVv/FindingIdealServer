@@ -1,7 +1,15 @@
 package Jun.Server.model;
 
+import com.google.gson.JsonObject;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class UserProfile {
     private String email;
