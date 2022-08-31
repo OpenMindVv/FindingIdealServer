@@ -1,7 +1,5 @@
 package Jun.Server.mapper;
-
 import java.util.List;
-
 import Jun.Server.model.UserProfile;
 import com.google.gson.JsonObject;
 import org.apache.ibatis.annotations.*;

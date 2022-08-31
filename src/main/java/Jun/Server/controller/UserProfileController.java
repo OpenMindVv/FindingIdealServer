@@ -31,15 +31,14 @@ public class UserProfileController implements UserDetailsService {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
-    /*
-        @GetMapping("/user/getProfile")
-        public UserProfile getUserProfile(@RequestParam("email") String email) {
-            UserProfile result = mapper.getUserProfile(email);
-            System.out.println(result.getEmail());
-            System.out.println(result.getPassword());
-            return result;
-        }
-     */
+
+    @GetMapping("/user/getPassword")
+    public UserProfile getPassword(@RequestParam("email") String email) {
+        UserProfile result = mapper.getUserProfile(email);
+        return result;
+    }
+
+
     @GetMapping("/user/getProfile")
     public UserProfile getUserProfile(@RequestHeader("X-AUTH-TOKEN") String token) {
         UserProfile result = mapper.getUserProfile(jwtTokenProvider.getUserPk(token));
@@ -66,8 +65,9 @@ public class UserProfileController implements UserDetailsService {
 
     //정보수정 코드 넣어야함
     @PostMapping("/user/editProfile")
-    public void postUserProfile(@RequestParam("email") String email, @RequestParam("name") String name, @RequestParam("password") String password) {
-        mapper.updateUserProfile(email, name, password);
+    public int postUserProfile(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
+        int result = mapper.updateUserProfile(email, name, password);
+        return result;
     }
 
     //로그인인데 토큰 발행 해야함
@@ -100,11 +100,6 @@ public class UserProfileController implements UserDetailsService {
         else System.out.println("성공");
 
         return jwtTokenProvider.createToken(user.getEmail(), user.getRoles()); // roles에 관리자 또는 유저로 역할 나눠야함 -> 나중에 관리자 페이지 만들 때 회원가입에서 추가해야하는거임
-    }
-
-    @GetMapping("/user/home")
-    public String home() {
-        return "home";
     }
 
     //회원삭제넣자
