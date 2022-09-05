@@ -1,4 +1,5 @@
 package Jun.Server.mapper;
+import java.io.File;
 import java.util.List;
 import Jun.Server.model.UserProfile;
 import com.google.gson.JsonObject;
@@ -25,6 +26,8 @@ public interface UserProfileMapper {
 
     @Insert("INSERT INTO UserProfile VALUES(#{email}, #{password}, #{name}, #{follow}, #{following})")
     int insertUserProfile(@Param("email") String email, @Param("password") String password, @Param("name") String name, @Param("follow") String follow, @Param("following") String following);
+    @Insert("INSERT INTO Information (user) VALUES(LOAD_FILE(#{imageFile}))")
+    int createUserProfileImage(@Param("imageFile") String imageFile);
 
     @Update("UPDATE UserProfile SET name=#{name}, password=#{password} WHERE email=#{email}")
     int updateUserProfile(@Param("email") String email, @Param("name") String name, @Param("password") String password);

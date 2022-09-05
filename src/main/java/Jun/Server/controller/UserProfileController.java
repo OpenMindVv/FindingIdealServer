@@ -1,5 +1,6 @@
 package Jun.Server.controller;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 
@@ -63,32 +64,19 @@ public class UserProfileController implements UserDetailsService {
         return result;
     }
 
+    @PutMapping("/user/ProfileImage")
+    public int createUserProfileImage(@RequestParam("imageFile") String imageFile) {
+        int result = mapper.createUserProfileImage(imageFile);
+        System.out.println("result:   "+result);
+        return result;
+    }
+
     //정보수정 코드 넣어야함
     @PostMapping("/user/editProfile")
     public int postUserProfile(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
         int result = mapper.updateUserProfile(email, name, password);
         return result;
     }
-
-    //로그인인데 토큰 발행 해야함
-/*
-    @PostMapping("/user/login")
-    public JsonObject login(@RequestParam("email") String email, @RequestParam("password") String password) {
-        String result = mapper.login(email, password);
-        JsonObject jsonObject = new JsonObject();
-        if(result.equals(null)){
-            // Json형식 만들어서 클라로 송신, 클래스 형식으로 만들어서 json형식으로 보낼 수도 있음
-            // 단 클래스에 RestController또는 controller와 responsebody 어노테이션이 있어야함
-            jsonObject.addProperty("result", "error");
-            jsonObject.addProperty("test", "5");
-            return jsonObject;
-        }
-        jsonObject.addProperty("result", "200");
-        jsonObject.addProperty("test", "5");
-        return jsonObject;
-    }
-
- */
 
     @PostMapping("user/login")
     public String login(@RequestParam("email") String email, @RequestParam("password") String password) {
