@@ -1,6 +1,10 @@
 package Jun.Server.controller;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 
@@ -32,6 +36,11 @@ public class UserProfileController implements UserDetailsService {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
+    @GetMapping("/user/getImage")
+    public String getUserProfileImage(@RequestParam("image") String image) {
+        String result = mapper.getUserProfileImage(image);
+        return result;
+    }
 
     @GetMapping("/user/getPassword")
     public UserProfile getPassword(@RequestParam("email") String email) {
@@ -65,10 +74,20 @@ public class UserProfileController implements UserDetailsService {
     }
 
     @PutMapping("/user/ProfileImage")
-    public int createUserProfileImage(@RequestParam("imageFile") String imageFile) {
-        int result = mapper.createUserProfileImage(imageFile);
-        System.out.println("result:   "+result);
-        return result;
+    public int createUserProfileImage(@RequestParam("imageFile") String imageFile) throws UnsupportedEncodingException {
+        //int result = mapper.createUserProfileImage(imageFile);
+        //System.out.println("imageFile" + imageFile);
+        //System.out.println("result:   "+result);
+
+        System.out.println(imageFile);
+        imageFile = imageFile.replace("\n","");
+        byte[] decoded = Base64.getDecoder()
+                .decode(imageFile.getBytes("UTF-8"));
+        String decodedString = new String(decoded);
+        System.out.println(decodedString);
+
+        //System.out.println("imageFile" + decodedString);
+        return 1;
     }
 
     //정보수정 코드 넣어야함

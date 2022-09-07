@@ -15,8 +15,9 @@ public interface UserProfileMapper {
     @Select("SELECT * FROM UserProfile")
     List<UserProfile> getUserProfileList();
 
-    //@Select("SELECT * FROM UserProfile WHERE email=#{email} AND password=#{password}")
-    //String login(@Param("email") String email, @Param("password") String password);
+    @Select("SELECT * FROM Information WHERE user=#{image}")
+    String getUserProfileImage(@Param("image") String image);
+
 
     @Select("SELECT * FROM UserProfile WHERE email=#{email} AND password=#{password}")
     UserProfile login(@Param("email") String email, @Param("password") String password);
@@ -26,6 +27,8 @@ public interface UserProfileMapper {
 
     @Insert("INSERT INTO UserProfile VALUES(#{email}, #{password}, #{name}, #{follow}, #{following})")
     int insertUserProfile(@Param("email") String email, @Param("password") String password, @Param("name") String name, @Param("follow") String follow, @Param("following") String following);
+
+    // 이미지 저장하는 메서드
     @Insert("INSERT INTO Information (user) VALUES(LOAD_FILE(#{imageFile}))")
     int createUserProfileImage(@Param("imageFile") String imageFile);
 
