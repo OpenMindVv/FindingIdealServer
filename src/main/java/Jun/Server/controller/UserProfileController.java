@@ -75,8 +75,8 @@ public class UserProfileController implements UserDetailsService {
     }
 
     @PutMapping("/user/insert")
-    public int createProfile(@RequestParam("Image") String Image, @RequestParam("email") String email, @RequestParam("name") String name, @RequestParam("password") String password, @RequestParam("follow") String follow, @RequestParam("following") String following, @RequestParam("animalFace") String animalFace) {
-        int result = mapper.createProfile(Image, email, name, password, follow, following, animalFace);
+    public int createProfile(@RequestParam("Image") String Image, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("name") String name, @RequestParam("follow") String follow, @RequestParam("following") String following, @RequestParam("animalFace") String animalFace) {
+        int result = mapper.createProfile(Image, email, password, name, follow, following, animalFace);
         System.out.println("--------------------------");
         System.out.println(result);
         return result;
