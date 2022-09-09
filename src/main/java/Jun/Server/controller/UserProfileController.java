@@ -98,8 +98,8 @@ public class UserProfileController implements UserDetailsService {
 
     //정보수정 코드 넣어야함
     @PostMapping("/user/editProfile")
-    public int postUserProfile(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
-        int result = mapper.updateUserProfile(email, name, password);
+    public int postUserProfile(@RequestParam("image") String image, @RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
+        int result = mapper.updateUserProfile(image, email, name, password);
         return result;
     }
 

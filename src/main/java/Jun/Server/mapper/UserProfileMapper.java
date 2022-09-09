@@ -38,8 +38,8 @@ public interface UserProfileMapper {
     @Insert("UPDATE profile SET Image=#{imageFile}")
     int insertImage(@Param("imageFile") String imageFile);
 
-    @Update("UPDATE profile SET name=#{name}, password=#{password} WHERE email=#{email}")
-    int updateUserProfile(@Param("email") String email, @Param("name") String name, @Param("password") String password);
+    @Update("UPDATE profile SET Image = #{image}, name=#{name}, password=#{password} WHERE email=#{email}")
+    int updateUserProfile(@Param("image") String image, @Param("email") String email, @Param("name") String name, @Param("password") String password);
 
     @Delete("DELETE FROM profile WHERE email=#{email}")
     int deleteUserProfile(@Param("email") String email);
