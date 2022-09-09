@@ -20,6 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @RestController
@@ -73,20 +74,25 @@ public class UserProfileController implements UserDetailsService {
         return result;
     }
 
-    @PutMapping("/user/ProfileImage")
-    public int createUserProfileImage(@RequestParam("imageFile") String imageFile) throws UnsupportedEncodingException {
-        //int result = mapper.createUserProfileImage(imageFile);
-        //System.out.println("imageFile" + imageFile);
-        //System.out.println("result:   "+result);
+    @PutMapping("/user/insert")
+    public int createProfile(@RequestParam("Image") String Image, @RequestParam("email") String email, @RequestParam("name") String name, @RequestParam("password") String password, @RequestParam("follow") String follow, @RequestParam("following") String following, @RequestParam("animalFace") String animalFace) {
+        int result = mapper.createProfile(Image, email, name, password, follow, following, animalFace);
+        System.out.println("--------------------------");
+        System.out.println(result);
+        return result;
+    }
 
+    @PostMapping("/user/insertImage")
+    public int insertImage(@RequestParam("imageFile") String imageFile) {
         System.out.println(imageFile);
-        imageFile = imageFile.replace("\n","");
-        byte[] decoded = Base64.getDecoder()
-                .decode(imageFile.getBytes("UTF-8"));
+        byte[] decoded = Base64.getDecoder().decode(imageFile.getBytes());
         String decodedString = new String(decoded);
-        System.out.println(decodedString);
+        int result = mapper.insertImage(imageFile);
+        System.out.println("result" + result);
 
-        //System.out.println("imageFile" + decodedString);
+        //imageFile = imageFile.replace("\n","");
+        //.replace('-', '+')
+        //.replace('_', '/')
         return 1;
     }
 
