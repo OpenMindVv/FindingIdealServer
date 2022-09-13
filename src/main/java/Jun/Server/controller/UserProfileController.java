@@ -49,6 +49,12 @@ public class UserProfileController implements UserDetailsService {
         return result;
     }
 
+    @GetMapping("/user/getName")
+    public String getName(@RequestParam("email") String email) {
+        String result = mapper.getName(email);
+        System.out.println("result= "+result);
+        return result;
+    }
 
     @GetMapping("/user/getProfile")
     public UserProfile getUserProfile(@RequestHeader("X-AUTH-TOKEN") String token) {
