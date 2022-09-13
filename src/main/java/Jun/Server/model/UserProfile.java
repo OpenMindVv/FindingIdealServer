@@ -12,11 +12,13 @@ import java.util.List;
 
 
 public class UserProfile {
+    private String Image;
     private String email;
     private String password;
     private String name;
     private String follow;
     private String following;
+    private String animalFace;
 
     private List<String> roles = new ArrayList<>();
 
@@ -65,6 +67,21 @@ public class UserProfile {
 
     public void setFollowing(String following) {
         this.following = following;
+    }
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
+    }
+
+    public String getAnimalFace() {
+        return animalFace;
+    }
+
+    public void setAnimalFace(String animalFace) {
+        this.animalFace = animalFace;
     }
 
 }

@@ -1,5 +1,10 @@
 package Jun.Server.controller;
 
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @RestController
@@ -31,6 +37,11 @@ public class UserProfileController implements UserDetailsService {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
+    @GetMapping("/user/getImage")
+    public String getUserProfileImage(@RequestParam("image") String image) {
+        String result = mapper.getUserProfileImage(image);
+        return result;
+    }
 
     @GetMapping("/user/getPassword")
     public UserProfile getPassword(@RequestParam("email") String email) {
@@ -38,6 +49,12 @@ public class UserProfileController implements UserDetailsService {
         return result;
     }
 
+    @GetMapping("/user/getName")
+    public String getName(@RequestParam("email") String email) {
+        String result = mapper.getName(email);
+        System.out.println("result= "+result);
+        return result;
+    }
 
     @GetMapping("/user/getProfile")
     public UserProfile getUserProfile(@RequestHeader("X-AUTH-TOKEN") String token) {
@@ -55,40 +72,35 @@ public class UserProfileController implements UserDetailsService {
     }
 
     //회원가입
-    @PutMapping("/user/create")
-    public int putUserProfile(@RequestParam("email") String email, @RequestParam("name") String name, @RequestParam("password") String password, @RequestParam("follow") String follow, @RequestParam("following") String following) {
-        int result = mapper.insertUserProfile(email, name, password, follow, following);
+
+    @PutMapping("/user/insert")
+    public int createProfile(@RequestParam("Image") String Image, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("name") String name, @RequestParam("follow") String follow, @RequestParam("following") String following, @RequestParam("animalFace") String animalFace) {
+        int result = mapper.createProfile(Image, email, password, name, follow, following, animalFace);
         System.out.println("--------------------------");
         System.out.println(result);
         return result;
     }
 
+    @PostMapping("/user/insertImage")
+    public int insertImage(@RequestParam("imageFile") String imageFile) {
+        System.out.println(imageFile);
+        byte[] decoded = Base64.getDecoder().decode(imageFile.getBytes());
+        String decodedString = new String(decoded);
+        int result = mapper.insertImage(imageFile);
+        System.out.println("result" + result);
+
+        //imageFile = imageFile.replace("\n","");
+        //.replace('-', '+')
+        //.replace('_', '/')
+        return 1;
+    }
+
     //정보수정 코드 넣어야함
     @PostMapping("/user/editProfile")
-    public int postUserProfile(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
-        int result = mapper.updateUserProfile(email, name, password);
+    public int postUserProfile(@RequestParam("image") String image, @RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
+        int result = mapper.updateUserProfile(image, email, name, password);
         return result;
     }
-
-    //로그인인데 토큰 발행 해야함
-/*
-    @PostMapping("/user/login")
-    public JsonObject login(@RequestParam("email") String email, @RequestParam("password") String password) {
-        String result = mapper.login(email, password);
-        JsonObject jsonObject = new JsonObject();
-        if(result.equals(null)){
-            // Json형식 만들어서 클라로 송신, 클래스 형식으로 만들어서 json형식으로 보낼 수도 있음
-            // 단 클래스에 RestController또는 controller와 responsebody 어노테이션이 있어야함
-            jsonObject.addProperty("result", "error");
-            jsonObject.addProperty("test", "5");
-            return jsonObject;
-        }
-        jsonObject.addProperty("result", "200");
-        jsonObject.addProperty("test", "5");
-        return jsonObject;
-    }
-
- */
 
     @PostMapping("user/login")
     public String login(@RequestParam("email") String email, @RequestParam("password") String password) {
