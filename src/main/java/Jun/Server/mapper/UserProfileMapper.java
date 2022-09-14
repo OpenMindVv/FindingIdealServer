@@ -21,7 +21,6 @@ public interface UserProfileMapper {
     @Select("SELECT * FROM Information WHERE user=#{image}")
     String getUserProfileImage(@Param("image") String image);
 
-
     @Select("SELECT * FROM profile WHERE email=#{email} AND password=#{password}")
     UserProfile login(@Param("email") String email, @Param("password") String password);
 
