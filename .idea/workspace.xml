@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c263829-7d62-486d-bc9d-e74d6b85f31a" name="Changes" comment="[ADD] rds 데이터베이스 연결, 이메일로 회원이름을 얻는 쿼리 추가">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+    <list default="true" id="0c263829-7d62-486d-bc9d-e74d6b85f31a" name="Changes" comment="[ADD] build 폴더에 .jar파일 생성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/controller/UserProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/controller/UserProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/mapper/UserProfileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/mapper/UserProfileMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/mapper/UserProfileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/mapper/UserProfileMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663068719336</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[ADD] build 폴더에 .jar파일 생성">
+      <created>1663172330314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663172330314</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[ADD] build 폴더에 .jar파일 생성">
+      <created>1663172508686</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663172508687</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +155,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[ADD] rds 데이터베이스 연결, 이메일로 회원이름을 얻는 쿼리 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] rds 데이터베이스 연결, 이메일로 회원이름을 얻는 쿼리 추가" />
+    <MESSAGE value="[ADD] build 폴더에 .jar파일 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] build 폴더에 .jar파일 생성" />
   </component>
 </project>
