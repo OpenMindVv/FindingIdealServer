@@ -82,23 +82,19 @@ public class UserProfileController implements UserDetailsService {
     }
 
     @PostMapping("/user/insertImage")
-    public int insertImage(@RequestParam("imageFile") String imageFile) {
-        System.out.println(imageFile);
+    public int insertImage(@RequestParam("imageFile") String imageFile, @RequestParam("animalFace") String animalFace, @RequestParam("email") String email) {
         byte[] decoded = Base64.getDecoder().decode(imageFile.getBytes());
         String decodedString = new String(decoded);
-        int result = mapper.insertImage(imageFile);
+        int result = mapper.insertImage(imageFile, animalFace, email);
         System.out.println("result" + result);
 
-        //imageFile = imageFile.replace("\n","");
-        //.replace('-', '+')
-        //.replace('_', '/')
         return 1;
     }
 
     //정보수정 코드 넣어야함
     @PostMapping("/user/editProfile")
     public int postUserProfile(@RequestParam("image") String image, @RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password) {
-        int result = mapper.updateUserProfile(image, email, name, password);
+        int result = mapper.updateUserProfile(image, name, email, password);
         return result;
     }
 

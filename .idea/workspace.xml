@@ -4,42 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c263829-7d62-486d-bc9d-e74d6b85f31a" name="Changes" comment="[ADD] build 폴더에 .jar파일 생성" />
+    <list default="true" id="0c263829-7d62-486d-bc9d-e74d6b85f31a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/ServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/ServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/controller/UserProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/controller/UserProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtTokenProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/mapper/UserProfileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/mapper/UserProfileMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/utils/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/utils/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/ServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/controller/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/mapper/UserProfileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/mapper/UserProfileMapper.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Server" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Server" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Server" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -61,11 +43,13 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sec/OneDrive/바탕 화면/test/FindingIdealServer&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jojunhui/Desktop/Project/FindingIdealServer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;efb2c0233845792ed9bd52006b23ce34&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ServerApplication">
+  <component name="RunManager">
     <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Jun.Server.ServerApplication" />
       <module name="Server.main" />
@@ -79,31 +63,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindingIdealServer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ServerApplication" />
-        <item itemvalue="Gradle.FindingIdealServer [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -115,30 +77,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663064167498</updated>
+      <workItem from="1663074280260" duration="973000" />
+      <workItem from="1663130760233" duration="779000" />
+      <workItem from="1663146433340" duration="7908000" />
     </task>
-    <task id="LOCAL-00001" summary="[ADD] rds 데이터베이스 연결, 이메일로 회원이름을 얻는 쿼리 추가">
-      <created>1663068719336</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663068719336</updated>
-    </task>
-    <task id="LOCAL-00002" summary="[ADD] build 폴더에 .jar파일 생성">
-      <created>1663172330314</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1663172330314</updated>
-    </task>
-    <task id="LOCAL-00003" summary="[ADD] build 폴더에 .jar파일 생성">
-      <created>1663172508686</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1663172508687</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -150,10 +96,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="[ADD] rds 데이터베이스 연결, 이메일로 회원이름을 얻는 쿼리 추가" />
-    <MESSAGE value="[ADD] build 폴더에 .jar파일 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] build 폴더에 .jar파일 생성" />
   </component>
 </project>

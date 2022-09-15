@@ -27,18 +27,18 @@ public interface UserProfileMapper {
     @Select("SELECT * FROM profile WHERE email=#{email}")
     UserProfile getPassword(@Param("email") String email);
 
-    @Select("SELECT name FROM profile WHERE email=#{email}")
+    @Select("SELECT * FROM profile WHERE email=#{email}")
     UserProfile getName(@Param("email") String email);
 
     @Insert("INSERT INTO profile VALUES(#{Image}, #{email}, #{password}, #{name}, #{follow}, #{following}, #{animalFace})")
     int createProfile(@Param("Image") String Image, @Param("email") String email, @Param("password") String password, @Param("name") String name, @Param("follow") String follow, @Param("following") String following, @Param("animalFace") String animalFace);
 
     // 이미지 저장하는 메서드
-    @Insert("UPDATE profile SET Image=#{imageFile}")
-    int insertImage(@Param("imageFile") String imageFile);
+    @Insert({"UPDATE profile SET Image=#{imageFile}, animalFace=#{animalFace} WHERE email=#{email}"})
+    int insertImage(@Param("imageFile") String imageFile, @Param("animalFace") String animalFace, @Param("email") String email);
 
     @Update("UPDATE profile SET Image = #{image}, name=#{name}, password=#{password} WHERE email=#{email}")
-    int updateUserProfile(@Param("image") String image, @Param("email") String email, @Param("name") String name, @Param("password") String password);
+    int updateUserProfile(@Param("image") String image, @Param("name") String name, @Param("password") String password, @Param("email") String email);
 
     @Delete("DELETE FROM profile WHERE email=#{email}")
     int deleteUserProfile(@Param("email") String email);
