@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c263829-7d62-486d-bc9d-e74d6b85f31a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/ServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/ServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/controller/UserProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/controller/UserProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/jwtService/JwtTokenProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/mapper/UserProfileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/mapper/UserProfileMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/model/UserProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/utils/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Jun/Server/utils/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/ServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/controller/UserProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Jun/Server/mapper/UserProfileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jun/Server/mapper/UserProfileMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/sec/OneDrive/바탕 화면/test/FindingIdealServer",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jojunhui/Desktop/Project/FindingIdealServer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;efb2c0233845792ed9bd52006b23ce34&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Jun.Server.ServerApplication" />
@@ -70,8 +77,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663064167498</updated>
+      <workItem from="1663074280260" duration="973000" />
+      <workItem from="1663130760233" duration="779000" />
+      <workItem from="1663146433340" duration="7908000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
