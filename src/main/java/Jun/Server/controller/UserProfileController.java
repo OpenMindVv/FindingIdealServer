@@ -50,8 +50,8 @@ public class UserProfileController implements UserDetailsService {
     }
 
     @GetMapping("/user/getName")
-    public String getName(@RequestParam("email") String email) {
-        String result = mapper.getName(email);
+    public UserProfile getName(@RequestParam("email") String email) {
+        UserProfile result = mapper.getName(email);
         System.out.println("result= "+result);
         return result;
     }

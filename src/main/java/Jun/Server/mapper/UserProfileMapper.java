@@ -28,7 +28,7 @@ public interface UserProfileMapper {
     UserProfile getPassword(@Param("email") String email);
 
     @Select("SELECT name FROM profile WHERE email=#{email}")
-    String getName(@Param("email") String email);
+    UserProfile getName(@Param("email") String email);
 
     @Insert("INSERT INTO profile VALUES(#{Image}, #{email}, #{password}, #{name}, #{follow}, #{following}, #{animalFace})")
     int createProfile(@Param("Image") String Image, @Param("email") String email, @Param("password") String password, @Param("name") String name, @Param("follow") String follow, @Param("following") String following, @Param("animalFace") String animalFace);
