@@ -38,8 +38,8 @@ public class UserProfileController implements UserDetailsService {
     }
 
     @GetMapping("/user/getImage")
-    public String getUserProfileImage(@RequestParam("image") String image) {
-        String result = mapper.getUserProfileImage(image);
+    public String getUserProfileImage(@RequestParam("email") String email) {
+        String result = mapper.getUserProfileImage(email);
         return result;
     }
 
